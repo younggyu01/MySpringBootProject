@@ -1,0 +1,20 @@
+### create1
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name":"스프링",
+  "email":"spring@a.com"
+}
+
+### create 2
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name":"스프링2",
+  "email":"spring2@a.com"
+}
+
+###
+GET http://localhost:8080/api/users/1
