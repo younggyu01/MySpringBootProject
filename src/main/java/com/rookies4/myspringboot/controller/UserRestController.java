@@ -44,5 +44,16 @@ public class UserRestController {
                 .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
         return existUser;
     }
+    //Email로 조회하고, 수정
+    @PatchMapping("/{email}/")
+    public UserEntity updateUser(@PathVariable String email, @RequestBody UserEntity userDetail){
+        UserEntity existUser = userRepository.findByEmail(email) //Optional<UserEntity>
+                .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
+        //name 변경
+        existUser.setName(userDetail.getName());
+        //DB에 저장
+        UserEntity updateUser = userRepository.save(existUser);
+        return updateUser;
+    }
 
 }
