@@ -3,8 +3,8 @@ POST http://localhost:8080/api/users
 Content-Type: application/json
 
 {
-  "name":"스프링",
-  "email":"spring@a.com"
+  "name":"스프링클라우드",
+  "email":"springcloud@a.com"
 }
 
 ### create 2
@@ -12,12 +12,12 @@ POST http://localhost:8080/api/users
 Content-Type: application/json
 
 {
-  "name":"스프링2",
-  "email":"spring2@a.com"
+  "name":"스프링부트",
+  "email":"springboot@a.com"
 }
 
 ###
-GET http://localhost:8080/api/users/1
+GET http://localhost:8080/api/users
 
 
 ###
