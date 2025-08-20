@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/users")
+@RequestMapping("/api/users1")
 public class UserRestController {
     private final UserRepository userRepository;
 
@@ -42,7 +42,7 @@ public class UserRestController {
         UserEntity existUser = getExistUser(id);
         return existUser;
     }
-    //Email로 조회하고, 수정
+    //Email로 조회하고, 수정하기
     @PatchMapping("/{email}/")
     public UserEntity updateUser(@PathVariable String email, @RequestBody UserEntity userDetail){
         UserEntity existUser = userRepository.findByEmail(email) //Optional<UserEntity>
@@ -53,17 +53,18 @@ public class UserRestController {
         UserEntity updateUser = userRepository.save(existUser);
         return updateUser;
     }
-    //삭제
+    //삭제하기
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable Long id){
         UserEntity existUser = getExistUser(id);
         //DB에 삭제요청
         userRepository.delete(existUser);
-        return ResponseEntity.ok("User가 삭제되었습니다.");
+        return ResponseEntity.ok("User가 삭제 되었습니다.");
     }
 
     private UserEntity getExistUser(Long id) {
         Optional<UserEntity> optionalUser = userRepository.findById(id);
+        //orElseThrow(Supplier) Supplier의 추상메서드 T get()
         UserEntity existUser = optionalUser
                 .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
         return existUser;

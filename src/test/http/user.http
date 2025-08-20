@@ -15,20 +15,28 @@ Content-Type: application/json
   "name":"스프링부트"
 }
 
+### create 3
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name":"스프링1"
+}
+
 ###
 GET http://localhost:8080/api/users
 
 
 ###
-GET http://localhost:8080/api/users/4
+GET http://localhost:8080/api/users/80
 
 ###
-PATCH http://localhost:8080/api/users/spring@a.com/
+PATCH http://localhost:8080/api/users/spring2@a.com/
 Content-Type: application/json
 
 {
-  "name":"스프링3"
+  "name":"수정된스프링"
 }
 
 ###
-DELETE http://localhost:8080/api/users/1
+DELETE http://localhost:8080/api/users/8
