@@ -1,0 +1,95 @@
+### create1
+POST http://localhost:8080/api/students
+Content-Type: application/json
+
+{
+  "name": "홍길동",
+  "studentNumber": "S12345",
+  "detailRequest": {
+    "address": "서울시 강남구 테헤란로 123",
+    "phoneNumber": "010-1234-5678",
+    "email": "hong@example.com",
+    "dateOfBirth": "1995-05-15"
+  }
+}
+
+### create2
+POST http://localhost:8080/api/students
+Content-Type: application/json
+
+{
+  "name": "김철수",
+  "studentNumber": "S67890",
+  "detailRequest": {
+    "address": "서울시 마포구 홍대로 456",
+    "phoneNumber": "010-9876-5432",
+    "email": "kim@example.com",
+    "dateOfBirth": "1996-08-21"
+  }
+}
+
+### create3
+POST http://localhost:8080/api/students
+Content-Type: application/json
+
+{
+  "name": "이영희",
+  "studentNumber": "S13579",
+  "detailRequest": {
+    "address": "서울시 서초구 서초대로 789",
+    "phoneNumber": "010-5555-7777",
+    "email": "lee@example.com",
+    "dateOfBirth": "1997-11-03"
+  }
+}
+
+### create4 , detail 정보가 없는 경우
+POST http://localhost:8080/api/students
+Content-Type: application/json
+
+{
+  "name": "김둘리",
+  "studentNumber": "S13580"
+}
+
+### 조회
+GET http://localhost:8080/api/students
+
+### ID로 조회(get) - FETCH Join
+GET http://localhost:8080/api/students/1
+
+### 학번으로 조회 - Query Method
+GET http://localhost:8080/api/students/number/S12345
+
+### 학번으로 조회 - detail 정보가 없는 경우
+GET http://localhost:8080/api/students/number/S13580
+
+### 수정(put)
+PUT http://localhost:8080/api/students/1
+Content-Type: application/json
+
+{
+  "name": "홍길동",
+  "studentNumber": "S12345",
+  "detailRequest": {
+    "address": "서울시 송파구 올림픽로 123",
+    "phoneNumber": "010-1234-5678",
+    "email": "hong.updated@example.com",
+    "dateOfBirth": "1995-05-15"
+  }
+}
+
+### 수정(put) - 등록할때 StudentDetail 없는 Student의 정보 수정하기
+PUT http://localhost:8080/api/students/4
+Content-Type: application/json
+
+{
+  "name": "김둘리",
+  "studentNumber": "S13580",
+  "detailRequest": {
+    "address": "경기도 남양주시 123",
+    "phoneNumber": "010-5757-5678",
+    "email": "dooly@example.com",
+    "dateOfBirth": "1999-05-15"
+  }
+}
