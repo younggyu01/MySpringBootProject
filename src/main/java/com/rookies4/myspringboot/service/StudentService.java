@@ -120,8 +120,18 @@ public class StudentService {
             StudentDetail studentDetail = student.getStudentDetail();
 
             // Create new detail if not exists
+            // 등록할때 Student만 등록하고, StudentDetail을 등록하지 않은 경우의 Update
             if (studentDetail == null) {
+                //StudentDetail 엔티티를 생성
                 studentDetail = new StudentDetail();
+                //수정하기 위해 입력받은 address로 StudentDetail 엔티티에 set 하기
+                studentDetail.setAddress(request.getDetailRequest().getAddress());
+                //수정하기 위해 입력받은 phoneNumber로 StudentDetail 엔티티에 set 하기
+                studentDetail.setPhoneNumber(request.getDetailRequest().getPhoneNumber());
+                //수정하기 위해 입력받은 email로 StudentDetail 엔티티에 set 하기
+                studentDetail.setEmail(request.getDetailRequest().getEmail());
+                //수정하기 위해 입력받은 dateOfBirth로 StudentDetail 엔티티에 set 하기
+                studentDetail.setDateOfBirth(request.getDetailRequest().getDateOfBirth());
                 //양방향 연관관계 설정
                 studentDetail.setStudent(student);
                 student.setStudentDetail(studentDetail);
