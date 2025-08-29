@@ -93,3 +93,6 @@ Content-Type: application/json
     "dateOfBirth": "1999-05-15"
   }
 }
+
+### 조회
+GET http://localhost:8080/api/departments
