@@ -16025,3 +16025,65 @@ Caused by: java.sql.SQLException: Client does not support authentication protoco
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.2.8.jar:6.2.8]
 	... 18 more
 
+2025-08-29T13:29:02.342+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.MySpringBoot3ProjectApplication    : Starting MySpringBoot3ProjectApplication using Java 17.0.2 with PID 3492 (C:\mybackend\SpringBoot\MySpringBoot3Project\target\classes started by 82103 in C:\mybackend\SpringBoot\MySpringBoot3Project)
+2025-08-29T13:29:02.348+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.MySpringBoot3ProjectApplication    : The following 1 profile is active: "prod"
+2025-08-29T13:29:02.398+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-29T13:29:02.398+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-29T13:29:03.294+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-29T13:29:03.362+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 5 JPA repository interfaces.
+2025-08-29T13:29:03.926+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2025-08-29T13:29:03.939+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-08-29T13:29:03.940+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-29T13:29:03.992+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-08-29T13:29:03.993+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1594 ms
+2025-08-29T13:29:04.219+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-29T13:29:04.272+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-29T13:29:04.306+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2025-08-29T13:29:04.568+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-29T13:29:04.597+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-08-29T13:29:04.682+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7b54675
+2025-08-29T13:29:04.684+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-08-29T13:29:04.712+09:00  WARN 3492 --- [MySpringBoot3Project] [restartedMain] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-29T13:29:04.731+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.h.o.c.pooling                          : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 10.11.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-29T13:29:05.631+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-29T13:29:05.802+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-29T13:29:06.021+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.s.d.j.r.q.QueryEnhancerFactory         : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-29T13:29:06.524+09:00  WARN 3492 --- [MySpringBoot3Project] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-29T13:29:06.542+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-08-29T13:29:06.988+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.s.b.a.h.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:mariadb://127.0.0.1:3307/boot_db?user=boot&password=***'
+2025-08-29T13:29:07.023+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-29T13:29:07.028+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoints beneath base path '/actuator'
+2025-08-29T13:29:07.099+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path '/'
+2025-08-29T13:29:07.112+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.MySpringBoot3ProjectApplication    : Started MySpringBoot3ProjectApplication in 5.259 seconds (process running for 6.173)
+2025-08-29T13:29:07.125+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DataInitRunner                   : Starting data initialization...
+2025-08-29T13:29:07.182+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DataInitRunner                   : Creating departments...
+2025-08-29T13:29:07.221+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DataInitRunner                   : Created 4 departments
+2025-08-29T13:29:07.221+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DataInitRunner                   : Creating students...
+2025-08-29T13:29:07.242+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DataInitRunner                   : Created 8 students
+2025-08-29T13:29:07.243+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DataInitRunner                   : Data initialization completed successfully
+2025-08-29T13:29:07.257+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DataSource 구현객체는 com.zaxxer.hikari.HikariDataSource 
+2025-08-29T13:29:07.258+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DB Product Name = MariaDB
+2025-08-29T13:29:07.258+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DB URL = jdbc:mariadb://127.0.0.1:3307/boot_db?user=boot&password=***
+2025-08-29T13:29:07.259+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.DatabaseRunner                   : DB Username = boot
+2025-08-29T13:29:07.259+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : 현재 활성화된 CustomerVO Bean = CustomVO(mode=운영모드, rate=1.5)
+2025-08-29T13:29:07.260+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : MyBootProperties.getName() = Spring PROD
+2025-08-29T13:29:07.261+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : MyBootProperties.getAge() = 77
+2025-08-29T13:29:07.261+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : MyBootProperties.getFullName() = Spring PROD Boot
+2025-08-29T13:29:07.261+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.name = Spring PROD
+2025-08-29T13:29:07.261+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.age = 99
+2025-08-29T13:29:07.261+09:00  INFO 3492 --- [MySpringBoot3Project] [restartedMain] c.r.m.r.MyPropsRunner                    : Properties myboot.fullName = Spring PROD Boot
+2025-08-29T13:29:07.410+09:00  INFO 3492 --- [MySpringBoot3Project] [RMI TCP Connection(1)-192.168.0.8] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-29T13:29:07.410+09:00  INFO 3492 --- [MySpringBoot3Project] [RMI TCP Connection(1)-192.168.0.8] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2025-08-29T13:29:07.412+09:00  INFO 3492 --- [MySpringBoot3Project] [RMI TCP Connection(1)-192.168.0.8] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2025-08-29T13:30:24.758+09:00  INFO 3492 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown             : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-29T13:30:25.334+09:00  INFO 3492 --- [MySpringBoot3Project] [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown             : Graceful shutdown complete
+2025-08-29T13:30:25.339+09:00  INFO 3492 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-29T13:30:25.342+09:00  INFO 3492 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-08-29T13:30:25.346+09:00  INFO 3492 --- [MySpringBoot3Project] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
