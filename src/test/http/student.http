@@ -95,4 +95,37 @@ Content-Type: application/json
 }
 
 ### 조회
-GET http://localhost:8080/api/departments
+GET http://localhost:8080/api/departments/1
+
+### 삭제
+DELETE http://localhost:8080/api/departments/1
+
+### 학생 조회
+GET http://localhost:8080/api/students
+
+### CREATE Student (without Detail)
+POST http://localhost:8080/api/students
+Content-Type: application/json
+
+{
+  "name": "Jane Smith",
+  "studentNumber": "EE003",
+  "departmentId": 2
+}
+
+### UPDATE Student
+PUT http://localhost:8080/api/students/9
+Content-Type: application/json
+
+{
+"name": "Jane Smith",
+"studentNumber": "EE003",
+"departmentId": 2,
+"detailRequest": {
+"address": "789 Programming Blvd Updated",
+"phoneNumber": "010-9876-5432",
+"email": "john.doe.updated@example.com",
+"dateOfBirth": "1999-05-10"
+}
+}
+
